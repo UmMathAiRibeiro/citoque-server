@@ -8,6 +8,7 @@ module.exports = function (app) {
                 res.status(500);
                 console.log(err);
             } else {
+                console.log("CADASTROU, usuario: " + data.iduser);
                 res.json({
                     result: result,
                     status: 200
