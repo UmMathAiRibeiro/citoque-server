@@ -6,7 +6,7 @@ loginDAO.prototype.login = function (data, callback) {
         [data.email, data.senha], callback)
 }
 loginDAO.prototype.pegaLogin = function (data, callback) {
-    this._conection.query('SELECT iduser FROM usuario WHERE email=? and senha=sha2(?,512)',
+    this._conection.query('SELECT usuario.iduser, usuario.nome FROM usuario WHERE email=? and senha=sha2(?,512)',
         [data.email, data.senha], callback)
 }
 module.exports = function () {
